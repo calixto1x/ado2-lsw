@@ -1,0 +1,86 @@
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f0f2f5; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+}
+
+#container { 
+    background: #ffffff; 
+    padding: 40px; 
+    border-radius: 12px; 
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); 
+    width: 340px; 
+    text-align: center; 
+    transition: box-shadow 0.3s ease; 
+}
+
+/* Sombra bem evidente e borda destacada quando o mouse estiver em cima do container */
+#container.mouse-no-container {
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.3); /* Sombra maior e com mais opacidade */
+    border: 2px solid rgba(37, 99, 235, 0.4);       /* Adiciona uma bordinha sutil colorida */
+    transform: translateY(-2px);                     /* Dá um leve efeito de elevação */
+    transition: all 0.3s ease;                       /* Transição suave para a elevação */
+}
+
+h2 {
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+input { 
+    display: block;
+    width: 100%; 
+    padding: 12px 15px; 
+    margin: 15px 0; 
+    box-sizing: border-box; 
+    border-radius: 6px; 
+    font-size: 15px;
+    border: 1px solid #d1d5db; 
+    background-color: #fafafa;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+/* Botão de Entrar */
+#btn-entrar {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#btn-entrar:hover {
+    background-color: #1d4ed8;
+}
+
+/* Classe utilitária para esconder elementos */
+.escondido {
+    display: none !important;
+}
+
+#mensagem-aviso {
+    font-size: 0.9rem;
+    margin-top: 15px;
+    min-height: 20px;
+    font-weight: 500;
+}
+
+/* Classe aplicada via JS nos eventos de Focus */
+.borda-destaque { 
+    border: 2px solid #2563eb; 
+    background-color: #eff6ff; 
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); 
+}
